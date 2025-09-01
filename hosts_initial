@@ -1,0 +1,3 @@
+#ubuntu-01 ansible_host=192.168.127.135 ansible_user=ansible
+ubuntu-02 ansible_host=192.168.127.136 ansible_user=reza ansible_ssh_pass=Aa123456
+ubuntu-03 ansible_host=192.168.127.137 ansible_user=reza ansible_ssh_pass=Aa123456
