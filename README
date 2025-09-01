@@ -1,1 +1,17 @@
-By this instructure you can implement initial configration of Ansible"
+# By this instructure you can implement initial configration of Ansible"
+# Description 
+# In a real network with hundred server to make any modification to server needs a huge time so we need to implement ansible
+# But at first time that we want connect to server we must type "yes" to confirm the "host key checking " by this guid line this problem will solved
+# Also note that we can not connect to server with password becauses the process should be automatic and to have a better security this guild cause the Ansible # controll connect to Ansible target with " public / private key " concept
+
+# Because the first time we run , we must set password we need a package which is name " sshpass " and by running this playbook that package will check and if r# equired install on Ansible controll
+
+# To test that SSH connection without any password and host_key_checking
+ssh ansible@192.168.127.136
+
+# To test a simple command to make sure ansible working correclty
+ansible all -i /etc/ansible/hosts_final -m ping
+
+# To test a command that need sudo priviledge , If no password ask it means that configuration works correctly 
+ansible all -i /etc/ansible/hosts_final -m command -a "whoami" -b
+  
