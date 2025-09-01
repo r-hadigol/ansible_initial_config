@@ -25,13 +25,16 @@
 #    - For new projects, update this file to include only the relevant servers and ansible users.
 #
 # Testing:
-# 1. To test SSH connection without a password:
+# 1. To run playbook:
+     ansible-playbook -i /etc/ansible/hosts_initial playbook.yml --ask-pass --ask-become-pass
+
+# 2. To test SSH connection without a password:
      ssh ansible@192.168.127.136
 
-# 2. To test a simple Ansible command:
+# 3. To test a simple Ansible command:
      ansible all -i /etc/ansible/hosts_final -m ping
 #
-# 3. To test a command that requires sudo privileges:
+# 4. To test a command that requires sudo privileges:
      ansible all -i /etc/ansible/hosts_final -m command -a "whoami" -b
 #    If no password is asked, the configuration is working correctly.
 
