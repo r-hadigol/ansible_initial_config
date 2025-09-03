@@ -1,3 +1,7 @@
+[web-servers]
 ubuntu-02 ansible_host=192.168.127.136 ansible_user=ansible
+[db-servers]
 ubuntu-03 ansible_host=192.168.127.137 ansible_user=ansible
-
+[all-servers]
+ubuntu-03 ansible_host=192.168.127.137 ansible_user=ansible
+ubuntu-02 ansible_host=192.168.127.136 ansible_user=ansible
