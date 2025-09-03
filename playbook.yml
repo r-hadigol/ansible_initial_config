@@ -6,7 +6,8 @@
     - name: Ensure sshpass is installed
       apt:
         name: sshpass
-        state: present
+        state: latest
+        update_cache: yes
       when: ansible_os_family == "Debian"
 
 - name: Setup ansible user, SSH keys, and sudo on all targets
